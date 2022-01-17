@@ -5,6 +5,13 @@ import PackageDescription
 
 let package = Package(
   name: "SwiftPress",
+  platforms: [
+    .macOS(.v12),
+    .iOS(.v15),
+    .tvOS(.v15),
+    .macCatalyst(.v15),
+    .watchOS(.v8),
+  ],
   products: [
     .library(
       name: "SwiftPress",
@@ -17,7 +24,9 @@ let package = Package(
   targets: [
     .target(
       name: "SwiftPress",
-      dependencies: []
+      dependencies: [
+        .product(name: "Markdown", package: "swift-markdown"),
+      ]
     ),
     .testTarget(
       name: "SwiftPressTests",
