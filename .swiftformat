@@ -1,0 +1,42 @@
+--allman false
+--binarygrouping 4,8
+--closingparen balanced
+--commas always
+--conflictmarkers reject
+--decimalgrouping 3,6
+--elseposition same-line
+--voidtype void
+--exponentcase lowercase
+--exponentgrouping disabled
+--fractiongrouping disabled
+--fragment false
+--header "Copyright (C) 2020 Tyler Gregory (@01100010011001010110010101110000)\n\nThis program is free software: you can redistribute it and/or modify it under\nthe terms of the GNU General Public License as published by the Free Software\nFoundation, either version 3 of the License, or (at your option) any later\nversion.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY\nWARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR\nA PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with\nthis program.  If not, see <http://www.gnu.org/licenses/>."
+--hexgrouping 4,8
+--hexliteralcase uppercase
+--ifdef indent
+--importgrouping alphabetized
+--indent 2
+--indentcase false
+--linebreaks lf
+--octalgrouping 4,8
+--operatorfunc spaced
+--patternlet hoist
+--ranges spaced
+--self remove
+--selfrequired 
+--semicolons inline
+--stripunusedargs always
+--trailingclosures 
+--trimwhitespace always
+--wraparguments preserve
+--wrapcollections preserve
+--xcodeindentation disabled
+--disable trailingClosures,wrapMultilineStatementBraces,wrapSwitchCases,redundantBackticks
+--enable isEmpty,sortedSwitchCases,organizeDeclarations,markTypes
+--funcattributes prev-line
+--typeattributes prev-line
+--varattributes preserve
+--extensionacl on-extension
+--marktypes always
+--markextensions always
+--wrapreturntype if-multiline
