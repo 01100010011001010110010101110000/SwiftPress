@@ -127,14 +127,13 @@ public extension SwiftPress {
 
     public mutating func visitImage(_ image: Markdown.Image) -> AttributedString {
       var result = renderChildren(image)
-      result.imageURL = URL(string: image.source!)
-      result.alternateDescription = image.title
-      result.toolTip = image.title
+//      result.imageURL = URL(string: image.source!)
+//      result.alternateDescription = image.title
+//      result.toolTip = image.title
+//      return result
+      guard let destination = image.source else { return result }
+      result.link = URL(string: destination)
       return result
-    }
-
-    public mutating func visitTableCell(_ tableCell: Markdown.Table.Cell) -> AttributedString {
-      renderChildren(tableCell)
     }
 
     // MARK: Private
