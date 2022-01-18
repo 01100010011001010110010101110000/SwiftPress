@@ -137,8 +137,98 @@ extension SwiftPress: MarkupVisitor {
       }
       .frame(height: 30 * CGFloat(rows.count + 1))
       .erase()
+    case 3:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
+    case 4:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
+    case 5:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+        TableColumn(head[4].plainText) { unwrapCellAtIndex(4, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
+    case 6:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+        TableColumn(head[4].plainText) { unwrapCellAtIndex(4, in: $0, rowContent: rowContent) }
+        TableColumn(head[5].plainText) { unwrapCellAtIndex(5, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
+    case 7:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+        TableColumn(head[4].plainText) { unwrapCellAtIndex(4, in: $0, rowContent: rowContent) }
+        TableColumn(head[5].plainText) { unwrapCellAtIndex(5, in: $0, rowContent: rowContent) }
+        TableColumn(head[6].plainText) { unwrapCellAtIndex(6, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
+    case 8:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+        TableColumn(head[4].plainText) { unwrapCellAtIndex(4, in: $0, rowContent: rowContent) }
+        TableColumn(head[5].plainText) { unwrapCellAtIndex(5, in: $0, rowContent: rowContent) }
+        TableColumn(head[6].plainText) { unwrapCellAtIndex(6, in: $0, rowContent: rowContent) }
+        TableColumn(head[7].plainText) { unwrapCellAtIndex(7, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
+    case 9:
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+        TableColumn(head[4].plainText) { unwrapCellAtIndex(4, in: $0, rowContent: rowContent) }
+        TableColumn(head[5].plainText) { unwrapCellAtIndex(5, in: $0, rowContent: rowContent) }
+        TableColumn(head[6].plainText) { unwrapCellAtIndex(6, in: $0, rowContent: rowContent) }
+        TableColumn(head[7].plainText) { unwrapCellAtIndex(7, in: $0, rowContent: rowContent) }
+        TableColumn(head[8].plainText) { unwrapCellAtIndex(8, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
     default:
-      fatalError()
+      return SwiftUI.Table(rows) {
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
+        TableColumn(head[2].plainText) { unwrapCellAtIndex(2, in: $0, rowContent: rowContent) }
+        TableColumn(head[3].plainText) { unwrapCellAtIndex(3, in: $0, rowContent: rowContent) }
+        TableColumn(head[4].plainText) { unwrapCellAtIndex(4, in: $0, rowContent: rowContent) }
+        TableColumn(head[5].plainText) { unwrapCellAtIndex(5, in: $0, rowContent: rowContent) }
+        TableColumn(head[6].plainText) { unwrapCellAtIndex(6, in: $0, rowContent: rowContent) }
+        TableColumn(head[7].plainText) { unwrapCellAtIndex(7, in: $0, rowContent: rowContent) }
+        TableColumn(head[8].plainText) { unwrapCellAtIndex(8, in: $0, rowContent: rowContent) }
+        TableColumn(head[9].plainText) { unwrapCellAtIndex(9, in: $0, rowContent: rowContent) }
+      }
+      .frame(height: 30 * CGFloat(rows.count + 1))
+      .erase()
     }
 
     func unwrapCellAtIndex(_ index: Int, in row: Markdown.Table.Row, rowContent: [[AnyView]]) -> AnyView {
