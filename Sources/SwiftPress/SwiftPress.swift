@@ -115,9 +115,10 @@ extension SwiftPress: MarkupVisitor {
     guard !table.isEmpty else { return EmptyView().erase() }
 
     let rows = Array(table.body.rows)
-    var rowContent: [Int: [AnyView]] = [:]
-    rows.forEach {
-      rowContent[$0.indexInParent] = Array($0.cells).map { renderText($0) }
+    let rowContent: [[AnyView]] = rows.map { row in
+      row.cells.map { cell in
+        renderText(cell)
+      }
     }
 
     let head = Array(table.head.cells)
@@ -125,20 +126,30 @@ extension SwiftPress: MarkupVisitor {
     switch table.head.childCount {
     case 1:
       return SwiftUI.Table(rows) {
-        TableColumn(head[0].plainText) { rowContent[$0.indexInParent]![0] }
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
       }
       .frame(height: 30 * CGFloat(rows.count + 1))
       .erase()
     case 2:
       return SwiftUI.Table(rows) {
-        TableColumn(head[0].plainText) { rowContent[$0.indexInParent]![0] }
-        TableColumn(head[1].plainText) { rowContent[$0.indexInParent]![1] }
+        TableColumn(head[0].plainText) { unwrapCellAtIndex(0, in: $0, rowContent: rowContent) }
+        TableColumn(head[1].plainText) { unwrapCellAtIndex(1, in: $0, rowContent: rowContent) }
       }
       .frame(height: 30 * CGFloat(rows.count + 1))
       .erase()
     default:
       fatalError()
     }
+
+    func unwrapCellAtIndex(_ index: Int, in row: Markdown.Table.Row, rowContent: [[AnyView]]) -> AnyView {
+      rowContent[row.indexInParent][safe: index] ?? SwiftUI.Text(verbatim: "").erase()
+    }
+  }
+}
+
+private extension Collection {
+  subscript(safe index: Index) -> Element? {
+    indices.contains(index) ? self[index] : nil
   }
 }
 
