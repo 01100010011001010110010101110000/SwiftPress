@@ -17,7 +17,11 @@ import SwiftUI
 
 // MARK: - SwiftPress
 
-public struct SwiftPress: MarkupVisitor {
+public struct SwiftPress {}
+
+// MARK: MarkupVisitor
+
+extension SwiftPress: MarkupVisitor {
   // MARK: Public
 
   public mutating func defaultVisit(_ markup: Markup) -> AnyView {
