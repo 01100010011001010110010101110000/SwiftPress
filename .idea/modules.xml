@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SwiftPress.iml" filepath="$PROJECT_DIR$/.idea/SwiftPress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SwiftPress2.iml" filepath="$PROJECT_DIR$/.idea/SwiftPress2.iml" />
     </modules>
   </component>
 </project>

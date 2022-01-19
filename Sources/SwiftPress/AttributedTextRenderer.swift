@@ -75,8 +75,24 @@ public extension SwiftPress {
 
     public mutating func visitHeading(_ heading: Heading) -> AttributedString {
       var result = renderChildren(heading)
-      result.foregroundColor = .red
-      result.font = .system(size: .init(32))
+
+      switch heading.level {
+      case 1:
+        result.font = .system(size: .init(32))
+      case 2:
+        result.font = .system(size: .init(24))
+      case 3:
+        result.font = .system(size: .init(18.72))
+      case 4:
+        result.font = .system(size: .init(16))
+      case 5:
+        result.font = .system(size: .init(13.28))
+      case 6:
+        result.font = .system(size: .init(10.72))
+      default:
+        result.font = .system(size: .init(10.72))
+      }
+
       return result
     }
 
