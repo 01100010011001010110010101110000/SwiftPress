@@ -17,7 +17,9 @@ import SwiftUI
 
 // MARK: - SwiftPress
 
-public struct SwiftPress {}
+public struct SwiftPress {
+  public init() {}
+}
 
 // MARK: MarkupVisitor
 
