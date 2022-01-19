@@ -123,6 +123,10 @@ extension SwiftPress: MarkupVisitor {
 
     let head = Array(table.head.cells)
 
+    func unwrapCellAtIndex(_ index: Int, in row: Markdown.Table.Row, rowContent: [[AnyView]]) -> AnyView {
+      rowContent[row.indexInParent][safe: index] ?? SwiftUI.Text(verbatim: "").erase()
+    }
+
     switch table.head.childCount {
     case 1:
       return SwiftUI.Table(rows) {
@@ -229,10 +233,6 @@ extension SwiftPress: MarkupVisitor {
       }
       .frame(height: 30 * CGFloat(rows.count + 1))
       .erase()
-    }
-
-    func unwrapCellAtIndex(_ index: Int, in row: Markdown.Table.Row, rowContent: [[AnyView]]) -> AnyView {
-      rowContent[row.indexInParent][safe: index] ?? SwiftUI.Text(verbatim: "").erase()
     }
   }
 }
