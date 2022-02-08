@@ -12,10 +12,10 @@
       },
       {
         "package": "swift-markdown",
-        "repositoryURL": "https://github.com/01100010011001010110010101110000/swift-markdown.git",
+        "repositoryURL": "https://github.com/apple/swift-markdown.git",
         "state": {
-          "branch": "illithid",
-          "revision": "00f063b6ada94bc6c253786593cb818bfd6cf5fc",
+          "branch": "main",
+          "revision": "16ebb0ccea68c0009f550bd48cca1df8675685dc",
           "version": null
         }
       }
