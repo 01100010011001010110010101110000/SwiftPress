@@ -19,7 +19,7 @@ let package = Package(
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/christianselig/swift-markdown.git", branch: "custom-attributes"),
+    .package(url: "https://github.com/apple/swift-markdown.git", branch: "main"),
   ],
   targets: [
     .target(
